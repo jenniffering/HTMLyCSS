@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+        
 <head>
     <meta charset="UTF-8"> <!-- Expresar uso de caracteres latinos-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,10 +8,26 @@
     <meta name="author" content="Jenniffer Alvarez">
     <meta name="description" content="En este sitio encontraras una naraccion de mi vida, en el dia a dia">
     <meta name="keywords" content="blogs,amor,moda">
+    
     <title>El Pequeño mundo de jenniffer</title>
     <link rel="icon" href="img/logoMIX.png">
 </head>
 <body>
-    
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <div ng-app="myApp" ng-controller="myCtrl">
+    <input  style="background-color:{{myCol}}" ng-model="myCol" value="{{myCol}}"><br>
+
+    {{ firstName + " " + lastName }}
+    <ul>
+            <li ng-repeat="x in names">
+              {{ x }}
+            </li>
+          </ul>
+</div>
+<script src="js/myApp.js"></script>
+<script src="js/myCtrl.js"></script>
 </body>
 </html>
+
+        
+      
